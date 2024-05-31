@@ -96,5 +96,5 @@ def ders_kaydet():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    git config --global  user.name "nowe090909"
+    git config --global  user.name "nowe090807"
     git config --global user.email  "utkanaydogdu48@gmail.com"

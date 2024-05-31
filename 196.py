@@ -10,3 +10,4 @@ else:
             print(num, "sayısı ASAL sayıdır.")
         else:
             print(num, "sayı ASAL değildir.")
+
