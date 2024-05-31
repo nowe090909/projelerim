@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} 
+.box {
+    background-color: #3d4543;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} 
+.display {
+    background-color: #bccd95;
+    width: 260px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 8px;
+}
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px; /* Font büyüklüğü burada değiştirildi */
+}
+.button.gray {
+    background-color: #6f6f6f;
+    color: white;
+}
+.button.yellow {
+    background-color: yellow;
+    color: black;
+}
+.button.pink {
+    background-color: #ff4561;
+    color: black;
+}
+.button.orange {
+    background-color: #ff9933;
+    color: black;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="display">
+<input type="text" readonly size="18" id="d">
+</div>
+<div class="keys">
+    <input type="button" class="button gray" value="C" onclick='sonuc("")'>
+    <input type="button" class="button gray" value="m-" onclick='sonuc("")'>
+    <input type="button" class="button gray" value="m+" onclick='sonuc("")'>
+    <input type="button" class="button pink" value="/" onclick='deger("/")'>
+    <input type="button" class="button yellow" value="7" onclick='deger("7")'>
+    <input type="button" class="button yellow" value="8" onclick='deger("8")'>
+    <input type="button" class="button yellow" value="9" onclick='deger("9")'>
+    <input type="button" class="button pink" value="*" onclick='deger("*")'>
+    <input type="button" class="button yellow" value="4" onclick='deger("4")'>
+    <input type="button" class="button yellow" value="5" onclick='deger("5")'>
+    <input type="button" class="button yellow" value="6" onclick='deger("6")'>
+    <input type="button" class="button pink" value="-" onclick='deger("-")'>
+    <input type="button" class="button yellow" value="1" onclick='deger("1")'>
+    <input type="button" class="button yellow" value="2" onclick='deger("2")'>
+    <input type="button" class="button yellow" value="3" onclick='deger("3")'>
+    <input type="button" class="button pink" value="+" onclick='deger("+")'>
+    <input type="button" class="button yellow" value="0" onclick='deger("0")'>
+    <input type="button" class="button yellow" value="." onclick='deger(".")'>
+    <input type="button" class="button gray" value="C" onclick='sonuc("")'>
+    <input type="button" class="button orange" value="=" onclick='hesapla()'>
+</div>
+</div>
+<script>
+function sonuc(val)
+{
+document.getElementById("d").value=val;
+}
+function deger(val)
+{
+document.getElementById("d").value+=val;
+}
+function hesapla() 
+{ 
+try 
+{ 
+  sonuc(eval(document.getElementById("d").value)) 
+} 
+catch(e) 
+{
+  sonuc('Error') 
+} 
+}  
+</script>
+</body>
+</html>

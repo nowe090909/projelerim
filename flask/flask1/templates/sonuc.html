@@ -1,0 +1,14 @@
+{% extends "app.html" %}
+{% block body %}
+ 
+<h2>{{ page_title }}</h2>
+<p>Toplama işlemi:</p>
+<table class="table">
+    <tr><td>İlk Değer:</td><td>{{ ilk_deger }}</td></tr>
+    <tr><td>İkinci Değer:</td><td>{{ ikinci_deger }}</td></tr>
+</table>
+ 
+<p>Sonuç</p>
+<h3>{{ toplam_sonuc }}</h3>
+ 
+{% endblock %}

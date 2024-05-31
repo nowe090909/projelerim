@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Takip Uygulaması</title>
+</head>
+<body>
+    <h3>Notlar:</h3>
+    <ul>
+        {% for notu in dersnotlari %}
+            <li><a href="/not_ortalama/{{ notu[0] }}"> {{ notu[1] }} {{ notu[2] }} </a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Not Giriş</title>
+</head>
+<body>
+    <h1>Not Girişi</h1>
+    <form action="{{ url_for('not_kaydet') }}" method="post">
+        <label for="ders_id">Ders:</label>
+        <select name="ders_id" id="ders_id">
+            {% for ders in dersler %}
+                <option value="{{ ders[0] }}">{{ ders[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="notu">Not Değeri:</label>
+        <input type="text" name="notu" id="notu">
+        <br>
+        <input type="submit" value="Notu Kaydet">
+    </form>
+   
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% extends 'app.html' %}
+{% block body %}
+
+<h2>galeri</h2>
+
+<table>
+    <tr>
+        <th>No</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Detay</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Adı1</td>
+        <td>Soyadı1</td>
+        <td><button onclick="showAlertAndRedirect()">YouTube'a Yönlendir</button></td>
+    </tr>
+</table>
+
+<div id="snowflakeContainer"></div>
+
+<script>
+    function createSnowflakes() {
+        const numFlakes = 20;
+        const snowflakeContainer = document.getElementById('snowflakeContainer');
+
+        for (let i = 0; i < numFlakes; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '&times;';
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            snowflake.style.opacity = Math.random();
+            snowflakeContainer.appendChild(snowflake);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        createSnowflakes();
+    });
+
+    function showAlertAndRedirect() {
+        window.location.href = "https://www.youtube.com/";
+    }
+</script>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    #snowflakeContainer {
+        position: fixed;
+        top: -50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .snowflake {
+        position: absolute;
+        color: #fff;
+        font-size: 2em;
+        animation: snowflakes 5s linear infinite;
+    }
+
+    @keyframes snowflakes {
+        0% {
+            transform: translateY(-100vh);
+        }
+        100% {
+            transform: translateY(100vh);
+        }
+    }
+</style>
+
+{% endblock %}

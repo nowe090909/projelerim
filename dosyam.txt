@@ -1,0 +1,7 @@
+# Orjinal dize
+dize = "Merhaba, Dünya!"
+
+# Tüm harfleri büyük harfe dönüştür
+buyuk_dize = dize.upper()
+
+print(buyuk_dize)

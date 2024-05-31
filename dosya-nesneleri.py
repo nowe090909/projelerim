@@ -1,0 +1,5 @@
+f=open("dosyam.txt","a")
+f.write("kaynak\n")
+f.write("dosya\n")
+f.write("veri\n")
+f.close()

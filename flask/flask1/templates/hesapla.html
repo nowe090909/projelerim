@@ -1,0 +1,15 @@
+{% extends 'app.html' %}
+{% block body %}
+ 
+<h2>{{ page_title }}</h2>
+ 
+<form method='POST' action='/topla'>
+<table class="table">
+<p>Toplanacak Rakamları Giriniz</p>
+<tr><td>İlk Değer:</td><td><input required name="ilkdeger" type="TEXT" width="10"></td></tr>
+<tr><td>İkinci Değer:</td><td><input required name="ikincideger" type="TEXT" width="10"></td></tr>
+</table>
+<p><input value="Hesapla" class="btn btn-primary" type="SUBMIT"></p>
+</form>
+ 
+{% endblock %}

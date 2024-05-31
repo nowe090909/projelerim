@@ -1,0 +1,1 @@
+#[5,3,9,7,2,1] bu liste içindeki sayıları kucukten buyuge sıralayan kod yaz                                                                                                                       
