@@ -8,3 +8,6 @@ if ortalama >= 60:
     print("Öğrenci geçti.")
 else:
     print("Öğrenci kaldı.")50
+
+
+MERHABA
